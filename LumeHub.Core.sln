@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0EA06BB8-E02
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LumeHub.Core", "src\LumeHub.Core\LumeHub.Core.csproj", "{23C6319B-AC16-46F0-A239-4E54BB08E07A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{26B38F65-4905-4E4A-BA51-2AECB1E79DB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "tests\UnitTests\UnitTests.csproj", "{5D1C549E-17BC-4232-BD18-8D91E500C111}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +21,17 @@ Global
 		{23C6319B-AC16-46F0-A239-4E54BB08E07A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23C6319B-AC16-46F0-A239-4E54BB08E07A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23C6319B-AC16-46F0-A239-4E54BB08E07A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D1C549E-17BC-4232-BD18-8D91E500C111}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D1C549E-17BC-4232-BD18-8D91E500C111}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D1C549E-17BC-4232-BD18-8D91E500C111}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D1C549E-17BC-4232-BD18-8D91E500C111}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{23C6319B-AC16-46F0-A239-4E54BB08E07A} = {0EA06BB8-E028-4C24-88D5-06BE514B37D9}
+		{5D1C549E-17BC-4232-BD18-8D91E500C111} = {26B38F65-4905-4E4A-BA51-2AECB1E79DB9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E2467060-69B7-42D8-A397-C36FFC79A946}
