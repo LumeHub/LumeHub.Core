@@ -1,4 +1,4 @@
-﻿using LumeHub.Core.Color;
+﻿using LumeHub.Core.Colors;
 
 namespace LumeHub.Core.Effects.Normal;
 

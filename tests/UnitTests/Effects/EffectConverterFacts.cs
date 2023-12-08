@@ -1,4 +1,4 @@
-﻿using LumeHub.Core.Color;
+﻿using LumeHub.Core.Colors;
 using LumeHub.Core.Effects;
 using LumeHub.Core.Effects.Normal;
 using System.Text.Json;
