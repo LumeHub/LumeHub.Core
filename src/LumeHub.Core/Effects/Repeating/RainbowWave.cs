@@ -6,6 +6,7 @@ namespace LumeHub.Core.Effects.Repeating;
 public sealed class RainbowWave : RepeatingEffect
 {
     public required float Multiplier { get; set; }
+    public required int Timeout { get; set; }
 
     protected override void Update(LedController ledController, CancellationToken ct)
     {
@@ -20,7 +21,7 @@ public sealed class RainbowWave : RepeatingEffect
             if (ct.IsCancellationRequested) break;
 
             ledController.Show();
-            Thread.Sleep(5);
+            Thread.Sleep(Timeout);
         }
     }
 }

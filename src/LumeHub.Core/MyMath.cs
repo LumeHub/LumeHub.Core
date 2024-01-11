@@ -16,4 +16,9 @@ public static class MyMath
 
         return max;
     }
+
+    /// <summary>
+    /// Really working implementation of the Modulus Operator when using negative numbers
+    /// </summary>
+    public static int Modulus(int a, int b) => a < 0 ? b + (a % b) : a % b;
 }
