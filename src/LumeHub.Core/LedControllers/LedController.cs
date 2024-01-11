@@ -1,4 +1,5 @@
 ﻿using LumeHub.Core.Colors;
+using Microsoft.Extensions.Options;
 
 namespace LumeHub.Core.LedControllers;
 
@@ -6,9 +7,9 @@ public abstract class LedController
 {
     public int PixelCount { get; }
 
-    protected LedController(int pixelCount)
+    protected LedController(IOptions<LedControllerOptions> options)
     {
-        PixelCount = pixelCount;
+        PixelCount = options.Value.PixelCount;
 
         SetAllPixel(new RgbColor(0, 0, 0));
     }

@@ -1,10 +1,11 @@
 ﻿using LumeHub.Core.Colors;
+using Microsoft.Extensions.Options;
 
 namespace LumeHub.Core.LedControllers;
 
-public sealed class Console(int pixelCount) : LedController(pixelCount)
+public sealed class Console(IOptions<LedControllerOptions> options) : LedController(options)
 {
-    private readonly RgbColor[] _leds = new RgbColor[pixelCount];
+    private readonly RgbColor[] _leds = new RgbColor[options.Value.PixelCount];
 
     public override RgbColor this[int index]
     {

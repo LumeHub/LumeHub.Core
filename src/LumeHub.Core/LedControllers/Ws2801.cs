@@ -1,12 +1,18 @@
 ﻿using System.Device.Spi;
+using Microsoft.Extensions.Options;
 
 using LumeHub.Core.Colors;
 
 namespace LumeHub.Core.LedControllers;
 
-public sealed class Ws2801(int pixelCount, SpiConnectionSettings settings) : LedController(pixelCount)
+public sealed class Ws2801(IOptions<Ws2801Options> options) : LedController(options)
 {
-    private readonly byte[] _buffer = new byte[pixelCount * 3];
+    private readonly SpiConnectionSettings _settings = new(options.Value.BusId)
+    {
+        ClockFrequency = options.Value.ClockFrequency
+    };
+
+    private readonly byte[] _buffer = new byte[options.Value.PixelCount * 3];
 
     public override RgbColor this[int index]
     {
@@ -26,7 +32,7 @@ public sealed class Ws2801(int pixelCount, SpiConnectionSettings settings) : Led
 
     public override void Show()
     {
-        using var device = SpiDevice.Create(settings);
+        using var device = SpiDevice.Create(_settings);
         device.Write(_buffer);
         Thread.Sleep(1);
     }
