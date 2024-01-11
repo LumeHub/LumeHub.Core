@@ -12,4 +12,7 @@ public record RgbColor(byte Red, byte Green, byte Blue)
 
     public static implicit operator RgbColor(Color color) =>
         new(color.R, color.G, color.B);
+
+    public float GetDistance(RgbColor other) =>
+        MyMath.Max(Math.Abs(Red - other.Red), Math.Abs(Green - other.Green), Math.Abs(Blue - other.Blue));
 }

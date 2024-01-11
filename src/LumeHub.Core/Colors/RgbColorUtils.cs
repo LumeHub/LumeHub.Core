@@ -2,11 +2,6 @@
 
 public static class RgbColorUtils
 {
-    public static float GetDistance(this RgbColor color, RgbColor other) => 
-        Math.Max(Math.Abs(color.Red - other.Red), 
-            Math.Max(Math.Abs(color.Green - other.Green), 
-                Math.Abs(color.Blue - other.Blue)));
-
     public static IEnumerable<RgbColor> InterpolateColors(RgbColor color1, RgbColor color2, int stepSize)
     {
         int stepCount = (int)Math.Max(color1.GetDistance(color2) / stepSize, 1);
