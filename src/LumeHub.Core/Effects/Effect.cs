@@ -1,9 +1,8 @@
-﻿using System.Text.Json.Serialization;
+﻿using LumeHub.Core.LedControllers;
 
 namespace LumeHub.Core.Effects;
 
-[JsonConverter(typeof(EffectConverter))]
-public abstract class Effect(string name)
+public abstract class Effect
 {
-    public string Name => name;
+    public abstract void Apply(LedController ledController);
 }
