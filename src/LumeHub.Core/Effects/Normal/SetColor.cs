@@ -1,5 +1,5 @@
 ﻿using LumeHub.Core.Colors;
-using LumeHub.Core.LedControllers;
+using LumeHub.Core.LedControl;
 
 namespace LumeHub.Core.Effects.Normal;
 

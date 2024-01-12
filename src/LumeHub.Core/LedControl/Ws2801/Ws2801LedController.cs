@@ -3,9 +3,9 @@ using Microsoft.Extensions.Options;
 
 using LumeHub.Core.Colors;
 
-namespace LumeHub.Core.LedControllers;
+namespace LumeHub.Core.LedControl.Ws2801;
 
-public sealed class Ws2801(IOptions<Ws2801Options> options) : LedController(options)
+public sealed class Ws2801LedController(IOptions<Ws2801LedControllerOptions> options) : LedController(options)
 {
     private readonly SpiConnectionSettings _settings = new(options.Value.BusId)
     {

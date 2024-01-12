@@ -1,7 +1,7 @@
 ﻿using LumeHub.Core.Colors;
 using Microsoft.Extensions.Options;
 
-namespace LumeHub.Core.LedControllers;
+namespace LumeHub.Core.LedControl;
 
 public abstract class LedController
 {
