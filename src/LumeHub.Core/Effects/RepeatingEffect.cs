@@ -2,7 +2,7 @@
 
 namespace LumeHub.Core.Effects;
 
-public abstract class RepeatingEffect : Effect
+public abstract class RepeatingEffect(string name) : Effect(name)
 {
     private Thread? _thread;
     private CancellationTokenSource? _tokenSource;

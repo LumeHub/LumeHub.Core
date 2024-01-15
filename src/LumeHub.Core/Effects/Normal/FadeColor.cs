@@ -3,7 +3,7 @@ using LumeHub.Core.LedControl;
 
 namespace LumeHub.Core.Effects.Normal;
 
-public class FadeColor : Effect
+public class FadeColor() : Effect(nameof(FadeColor))
 {
     public required RgbColor Color { get; init; }
 

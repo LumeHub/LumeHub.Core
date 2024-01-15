@@ -3,7 +3,7 @@ using LumeHub.Core.LedControl;
 
 namespace LumeHub.Core.Effects.Repeating;
 
-public sealed class RainbowWave : RepeatingEffect
+public sealed class RainbowWave() : RepeatingEffect(nameof(RainbowWave))
 {
     public required float Multiplier { get; set; }
     public required int Timeout { get; set; }
