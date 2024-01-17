@@ -10,7 +10,7 @@ public class FadeColor() : Effect(nameof(FadeColor))
     public override void Apply(LedController ledController)
     {
         var currentColor = ledController[0];
-        foreach (var color in RgbColorUtils.InterpolateColors(currentColor, Color, 12))
+        foreach (var color in RgbColorUtils.InterpolateColors(currentColor, Color, 5))
         {
             ledController.SetAllPixel(color);
             ledController.Show();

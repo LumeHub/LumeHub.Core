@@ -34,6 +34,6 @@ public sealed class Ws2801LedController(IOptions<Ws2801LedControllerOptions> opt
     {
         using var device = SpiDevice.Create(_settings);
         device.Write(_buffer);
-        Thread.Sleep(1);
+        Thread.Sleep(TimeSpan.FromMicroseconds(500));
     }
 }

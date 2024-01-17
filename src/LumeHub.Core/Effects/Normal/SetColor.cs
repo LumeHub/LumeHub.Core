@@ -5,7 +5,7 @@ namespace LumeHub.Core.Effects.Normal;
 
 public sealed class SetColor() : Effect(nameof(SetColor))
 {
-    public required RgbColor Color { get; set; }
+    public required RgbColor Color { get; init; }
 
     public override void Apply(LedController ledController)
     {
