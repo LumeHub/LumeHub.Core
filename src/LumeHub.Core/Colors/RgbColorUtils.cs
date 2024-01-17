@@ -7,7 +7,7 @@ public static class RgbColorUtils
         int stepCount = (int)Math.Max(color1.GetDistance(color2) / stepSize, 1);
         if (stepCount == 1)
         {
-            yield return color1;
+            yield return color2;
             yield break;
         }
 
